@@ -34,7 +34,11 @@ diff.hours(); // ===> 16776
 diff.minutes(); // ===> 1006560
 diff.seconds(); // ===> 60393600
 ```
-
+it also add a date helper:
+```
+Date.diff(date1, date2).years();
+Date.diff(date1, date2).months();
+```
 
 #### Contributing to DateDiff
 
