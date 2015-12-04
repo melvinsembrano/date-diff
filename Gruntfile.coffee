@@ -40,7 +40,7 @@ module.exports = (grunt) ->
     exec:
       tagRelease: 'git tag v<%= pkg.version %>'
       publish: 'git push origin master && git push --tags && npm publish'
-      commitRelease: 'git commit bower.json date-diff.min.js date-diff-light.min.js package.json -m "Release v<%= pkg.version %>"'
+      commitRelease: 'git commit bower.json date-diff.min.js package.json -m "Release v<%= pkg.version %>"'
 
     bump:
       options:
