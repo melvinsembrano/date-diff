@@ -6,6 +6,8 @@
 ###
 
 DateDiff = (date1, date2) ->
+  @date1 = date1
+  @date2 = date2
   @difference = Math.floor(date1 - date2)
   return
 
@@ -30,9 +32,20 @@ DateDiff.prototype.minutes = ->
 DateDiff.prototype.seconds = ->
   @_roundIt( @difference / divisors.seconds )
 
+DateDiff.prototype.months = ->
+  ret = (@date1.getFullYear() - @date2.getFullYear()) * 12
+  ret += @date1.getMonth() - @date2.getMonth()
+  eom = @endOfMonth(@date2).getDate()
+  ret += (@date1.getDate() / eom) - (@date2.getDate() / eom)
+  @_roundIt( ret )
+
+DateDiff.prototype.endOfMonth = (date) ->
+  new Date(date.getFullYear(), date.getMonth() + 1, 0)
+
 DateDiff.prototype._roundIt = (v) ->
   parseFloat(v.toFixed(1))
 
 Date.diff = (date1, date2) ->
   new DateDiff(date1, date2)
 
+window.DateDiff = DateDiff

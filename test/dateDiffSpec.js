@@ -1,4 +1,11 @@
 describe('DateDiff', function() {
+  it('will return 1', function() {
+    expect((new DateDiff(Date.today(), 7..days().ago()).weeks())).toBe(1);
+  });
+
+  it('will return 5', function() {
+    expect((new DateDiff(Date.today(), 5..day().ago()).days())).toBe(5);
+  });
 
   describe('#weeks', function() {
     it('will return 1', function() {
@@ -67,6 +74,24 @@ describe('DateDiff', function() {
     it('will return 86400', function() {
       expect(Date.diff(Date.today(), 1..day().ago()).seconds()).toBe(86400);
     });
-
   });
+
+  describe('#months', function() {
+    it('will return 2', function() {
+      expect(Date.diff(Date.today(), 2..months().ago()).months()).toBe(2);
+    });
+    it('will return 12', function() {
+      expect(Date.diff(Date.today(), 1..year().ago()).months()).toBe(12);
+    });
+    it('will return 18', function() {
+      expect(Date.diff(Date.today(), 18..months().ago()).months()).toBe(18);
+    });
+    it('will return 0.5', function() {
+      expect(Date.diff(Date.today(), 15..days().ago()).months()).toBe(0.5);
+    });
+    it('will return 3.7', function() {
+      expect(Date.diff(new Date(2015,11,1), new Date(2015, 8, 10)).months()).toBe(2.7);
+    });
+  });
+
 });
