@@ -51,8 +51,21 @@
     return this._roundIt(ret);
   };
 
+  DateDiff.prototype.years = function() {
+    var eom, ret;
+    ret = this.date1.getFullYear() - this.date2.getFullYear();
+    ret += (this.date1.getMonth() - this.date2.getMonth()) / 12;
+    eom = this.endOfMonth(this.date2).getDate();
+    ret += (this.date1.getDate() / eom) - (this.date2.getDate() / eom);
+    return this._roundIt(ret);
+  };
+
   DateDiff.prototype.endOfMonth = function(date) {
     return new Date(date.getFullYear(), date.getMonth() + 1, 0);
+  };
+
+  DateDiff.prototype.endOfYear = function(date) {
+    return new Date(date.getFullYear() + 1, 0, 0);
   };
 
   DateDiff.prototype._roundIt = function(v) {
