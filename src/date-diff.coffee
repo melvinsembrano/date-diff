@@ -15,6 +15,9 @@ divisors =
   minutes: 1000*60
   seconds: 1000
 
+DateDiff.prototype.weeks = ->
+  @_roundIt( @days() / 7 )
+
 DateDiff.prototype.days = ->
   @_roundIt( @difference / divisors.days )
 
@@ -28,7 +31,7 @@ DateDiff.prototype.seconds = ->
   @_roundIt( @difference / divisors.seconds )
 
 DateDiff.prototype._roundIt = (v) ->
-  parseInt(v.toFixed(1))
+  parseFloat(v.toFixed(1))
 
 Date.diff = (date1, date2) ->
   new DateDiff(date1, date2)

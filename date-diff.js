@@ -20,6 +20,10 @@
     seconds: 1000
   };
 
+  DateDiff.prototype.weeks = function() {
+    return this._roundIt(this.days() / 7);
+  };
+
   DateDiff.prototype.days = function() {
     return this._roundIt(this.difference / divisors.days);
   };
@@ -37,7 +41,7 @@
   };
 
   DateDiff.prototype._roundIt = function(v) {
-    return parseInt(v.toFixed(1));
+    return parseFloat(v.toFixed(1));
   };
 
   Date.diff = function(date1, date2) {
