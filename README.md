@@ -12,7 +12,7 @@ DateDiff is a minimalized javascript date arithmetic extension
 ### Usage
 **Node.js**
 ```
-require('date-diff');
+var DateDiff = require('date-diff');
 ```
 **In Browser**
 ```
