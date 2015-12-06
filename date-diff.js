@@ -76,6 +76,10 @@
     return new DateDiff(date1, date2);
   };
 
-  window.DateDiff = DateDiff;
+  this.DateDiff = DateDiff;
+
+  if (typeof module !== "undefined") {
+    module.exports = DateDiff;
+  }
 
 }).call(this);

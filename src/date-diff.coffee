@@ -58,4 +58,6 @@ DateDiff.prototype._roundIt = (v) ->
 Date.diff = (date1, date2) ->
   new DateDiff(date1, date2)
 
-window.DateDiff = DateDiff
+this.DateDiff = DateDiff
+
+module.exports = DateDiff if typeof(module) isnt "undefined"
