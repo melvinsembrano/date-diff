@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/melvinsembrano/date-diff.svg)](https://travis-ci.org/melvinsembrano/date-diff)
+[![npm version](https://badge.fury.io/js/date-diff.svg)](https://badge.fury.io/js/date-diff)
 # DateDiff
 DateDiff is a minimalized javascript date arithmetic extension
 
