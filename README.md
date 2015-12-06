@@ -1,7 +1,8 @@
 [![Build Status](https://travis-ci.org/melvinsembrano/date-diff.svg)](https://travis-ci.org/melvinsembrano/date-diff)
 [![npm version](https://badge.fury.io/js/date-diff.svg)](https://badge.fury.io/js/date-diff)
 # DateDiff
-DateDiff is a minimalized javascript date arithmetic extension
+DateDiff is a minimalized javascript date arithmetic extension.
+It works perfectly with [**easy-date**](https://github.com/melvinsembrano/easy-date)
 
 ### Installation
 **Node.js** `npm install date-diff`
