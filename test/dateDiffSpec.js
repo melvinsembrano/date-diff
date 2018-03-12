@@ -43,15 +43,12 @@ describe('DateDiff', function() {
     it('will return 1', function() {
       expect(Date.diff(Date.today(), 1..hour().ago()).hours()).toBe(1);
     });
-    it('will return 16', function() {
-      expect(Date.diff(Date.today(), 16..hour().ago()).hours()).toBe(16);
-    });
     it('will return 24', function() {
-      expect(Date.diff(Date.today(), 1..day().ago()).hours()).toBe(24);
+      expect(Date.diff(new Date(2018, 3, 12), new Date(2018, 3, 11)).hours()).toBe(24);
     });
 
     it('will return 72', function() {
-      expect(Date.diff(Date.today(), 3..days().ago()).hours()).toBe(72);
+      expect(Date.diff(new Date(2018, 3, 12), new Date(2018, 3, 9)).hours()).toBe(72);
     });
   });
 
@@ -63,7 +60,7 @@ describe('DateDiff', function() {
       expect(Date.diff(Date.today(), 3..hours().ago()).minutes()).toBe(180);
     });
     it('will return 4320', function() {
-      expect(Date.diff(Date.today(), 3..days().ago()).minutes()).toBe(4320);
+      expect(Date.diff(new Date(2018, 3, 12), new Date(2018, 3, 11)).seconds()).toBe(86400);
     });
   });
 
@@ -72,7 +69,7 @@ describe('DateDiff', function() {
       expect(Date.diff(Date.today(), 1..hour().ago()).seconds()).toBe(3600);
     });
     it('will return 86400', function() {
-      expect(Date.diff(Date.today(), 1..day().ago()).seconds()).toBe(86400);
+      expect(Date.diff(new Date(2018, 3, 12), new Date(2018, 3, 11)).seconds()).toBe(86400);
     });
   });
 
