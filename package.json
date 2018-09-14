@@ -2,7 +2,7 @@
   "name": "date-diff",
   "main": "date-diff.js",
   "description": "DateDiff is a minimalized Javascript date arithmetic extension.",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "keywords": [
     "DateDiff",
     "Date diff",
