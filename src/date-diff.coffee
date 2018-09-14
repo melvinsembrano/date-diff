@@ -41,9 +41,7 @@ DateDiff.prototype.months = ->
 
 DateDiff.prototype.years = ->
   ret = (@date1.getFullYear() - @date2.getFullYear())
-  ret += (@date1.getMonth() - @date2.getMonth()) / 12
-  eom = @endOfMonth(@date2).getDate()
-  ret += (@date1.getDate() / eom) - (@date2.getDate() / eom)
+  ret += (@dayOfYear(@date1) - @dayOfYear(@date2)) / @daysInYear(@date2)
   @_roundIt( ret )
 
 DateDiff.prototype.endOfMonth = (date) ->
@@ -51,6 +49,15 @@ DateDiff.prototype.endOfMonth = (date) ->
 
 DateDiff.prototype.endOfYear = (date) ->
   new Date(date.getFullYear()+1, 0, 0)
+
+DateDiff.prototype.beginOfYear = (date) ->
+  new Date(date.getFullYear(), 0, 0)
+
+DateDiff.prototype.dayOfYear = (date) ->
+  (date - @beginOfYear(date))/divisors.days
+
+DateDiff.prototype.daysInYear = (date) ->
+  (@endOfYear(date) - @beginOfYear(date))/divisors.days
 
 DateDiff.prototype._roundIt = (v) ->
   parseFloat(v.toFixed(1))
