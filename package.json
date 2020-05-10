@@ -2,7 +2,7 @@
   "name": "date-diff",
   "main": "date-diff.js",
   "description": "DateDiff is a minimalized Javascript date arithmetic extension.",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "keywords": [
     "DateDiff",
     "Date diff",
@@ -20,10 +20,10 @@
   "devDependencies": {
     "coffeescript": "^2.2.3",
     "easy-date": "^1.0.0",
-    "grunt": "^1.0.3",
+    "grunt": "^1.1.0",
     "grunt-bump": "^0.8.0",
     "grunt-contrib-coffee": "^2.0.0",
-    "grunt-contrib-jasmine": "^2.0.2",
+    "grunt-contrib-jasmine": "^2.2.0",
     "grunt-contrib-uglify": "^3.3.0",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-exec": "^3.0.0",

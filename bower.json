@@ -1,7 +1,7 @@
 {
   "name": "date-diff",
   "main": "date-diff.js",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "homepage": "https://github.com/melvinsembrano/date-diff",
   "authors": [
     "Melvin Sembrano <melvinsembrano@gmail.com>"
