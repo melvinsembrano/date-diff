@@ -104,5 +104,8 @@ describe('DateDiff', function() {
     it('will return 1.2', function() {
       expect(Date.diff(new Date(2016, 2, 1), new Date(2015, 0, 1)).years()).toBe(1.2);
     });
+    it('will return 0.5', function() {
+      expect(Date.diff(new Date(2016, 7, 1), new Date(2015, 12, 30)).years()).toBe(0.5);
+    });
   });
 });
