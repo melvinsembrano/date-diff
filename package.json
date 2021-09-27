@@ -1,8 +1,11 @@
 {
   "name": "date-diff",
-  "main": "date-diff.js",
+  "source": "src/date-diff.ts",
+  "main": "dist/date-diff.js",
+  "types": "dist/date-diff.d.ts",
+  "module": "dist/date-diff.module.js",
   "description": "DateDiff is a minimalized Javascript date arithmetic extension.",
-  "version": "0.2.2",
+  "version": "1.0.0",
   "keywords": [
     "DateDiff",
     "Date diff",
@@ -18,25 +21,10 @@
   "author": "Melvin Sembrano <melvinsembrano@gmail.com> (https://github.com/melvinsembrano/date-diff)",
   "license": "MIT",
   "devDependencies": {
-    "coffeescript": "^2.2.3",
-    "easy-date": "^1.0.0",
-    "grunt": "^1.1.0",
-    "grunt-bump": "^0.8.0",
-    "grunt-contrib-coffee": "^2.0.0",
-    "grunt-contrib-jasmine": "^2.2.0",
-    "grunt-contrib-uglify": "^3.3.0",
-    "grunt-contrib-watch": "^1.1.0",
-    "grunt-exec": "^3.0.0",
-    "grunt-karma": "^3.0.0",
-    "jasmine": "^3.1.0",
-    "jasmine-core": "^3.1.0",
-    "karma": "^3.0.0",
-    "karma-jasmine": "^1.1.1",
-    "karma-phantomjs-launcher": "^1.0.4"
+    "@parcel/packager-ts": "^2.0.0-rc.0",
+    "@parcel/transformer-typescript-types": "^2.0.0-rc.0",
+    "parcel": "^2.0.0-rc.0",
+    "typescript": "^4.4.3"
   },
-  "scripts": {
-    "test": "./node_modules/karma/bin/karma start --single-run --browsers PhantomJS",
-    "compile": "coffee --compile --output . src/",
-    "build": "npm run compile && grunt"
-  }
+  "scripts": {}
 }
