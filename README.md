@@ -1,4 +1,5 @@
-[![Build Status](https://travis-ci.org/melvinsembrano/date-diff.svg)](https://travis-ci.org/melvinsembrano/date-diff)
+[![Build Status](https://github.com/melvinsembrano/date-diff/actions/workflows/test.yml/badge.svg)](https://travis-ci.org/melvinsembrano/date-diff)
+
 [![npm version](https://badge.fury.io/js/date-diff.svg)](https://badge.fury.io/js/date-diff)
 # DateDiff
 DateDiff is a minimalized javascript date arithmetic extension.
@@ -36,11 +37,6 @@ diff.weeks(); // ===> 99.9
 diff.hours(); // ===> 16776
 diff.minutes(); // ===> 1006560
 diff.seconds(); // ===> 60393600
-```
-it also add a date helper method:
-```
-Date.diff(date1, date2).years();
-Date.diff(date1, date2).months();
 ```
 
 #### Contributing to DateDiff
