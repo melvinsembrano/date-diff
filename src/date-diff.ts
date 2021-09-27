@@ -9,7 +9,7 @@ const round = (value: number): number => {
   return parseFloat(value.toFixed(1))
 }
 
-class DateDiff {
+export default class DateDiff {
   date1: Date
   date2: Date
   difference: number
@@ -75,5 +75,3 @@ class DateDiff {
   }
 
 }
-
-export default DateDiff
