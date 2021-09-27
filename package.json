@@ -29,7 +29,9 @@
     "ts-jest": "^27.0.5",
     "typescript": "^4.4.3"
   },
-  "scripts": {},
+  "scripts": {
+    "test": "jest"
+  },
   "jest": {
     "preset": "ts-jest",
     "moduleFileExtensions": [
