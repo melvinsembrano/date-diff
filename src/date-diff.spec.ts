@@ -136,4 +136,10 @@ describe('DateDiff', () => {
       expect(new DateDiff(new Date(2016, 2, 1), new Date(2015, 0, 1)).years()).toBe(1.2)
     })
   })
+
+  describe('Date.diff shorthand', () => {
+    it('will return 1', () => {
+      expect(Date.diff(today(), yearsAgo(1)).years()).toBe(1)
+    })
+  })
 })

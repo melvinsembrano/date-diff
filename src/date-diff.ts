@@ -75,3 +75,11 @@ export default class DateDiff {
   }
 
 }
+
+declare global {
+  interface DateConstructor {
+    diff(date1: Date, date2: Date): DateDiff
+  }
+}
+
+Date.diff = (date1: Date, date2: Date) => new DateDiff(date1, date2)
